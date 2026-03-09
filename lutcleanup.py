@@ -40,7 +40,7 @@ def find_files(existantpath):
 
     # directory search
     for item in os.listdir(existantpath):
-        find_files(item)
+        find_files(os.path.join(existantpath, item))
 
 
 if len(sys.argv) < 2:
